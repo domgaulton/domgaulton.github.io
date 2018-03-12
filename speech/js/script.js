@@ -34,15 +34,15 @@ clickMe.onclick = function() {
 	// console.log('Listening...');
 	diagnostic.innerHTML = 'Listening...';
 	
-  //recognition.start();
-  answerMe();
+  recognition.start();
+  //answerMe('what is the share price of twitter');
 
 }
 
-recognition.onsoundstart = function(event) {
-  console.log(event);
-  // utterance.volume();
-}
+// recognition.onsoundstart = function(event) {
+//   console.log(event);
+//   // utterance.volume();
+// }
 
 
 recognition.onresult = function(event) {
@@ -69,7 +69,8 @@ recognition.onresult = function(event) {
 	// bg.style.backgroundColor = speech;
 	// console.log('Confidence: ' + event.results[0][0].confidence);
 
-	search(speech);
+  answerMe(speech);
+	//search(speech);
 }
 
 recognition.onspeechend = function() {
@@ -85,9 +86,9 @@ recognition.onerror = function(event) {
 	diagnostic.textContent = 'Error occurred: ' + event.error;
 }
 
-function answerMe() {
+function answerMe(question) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://api.wolframalpha.com/v1/result?i=What+is+the+stock+price+of+Twitter%3F&appid=DEMO');
+  xhr.open('GET', 'https://api.wolframalpha.com/v1/result?i=' + question + '&appid=DEMO');
   xhr.send(null);
 
   xhr.onreadystatechange = function () {
@@ -100,6 +101,12 @@ function answerMe() {
       diagnostic.textContent = 'Error: ' + xhr.status; // An error occurred during the request.
     }
   }
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
 
   // var xmlHttp = new XMLHttpRequest();
   // xmlHttp.onreadystatechange = function() { 
