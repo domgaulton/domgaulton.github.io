@@ -88,7 +88,7 @@ recognition.onerror = function(event) {
 
 function answerMe(question) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://api.wolframalpha.com/v1/result?i=' + question + '&appid=DEMO');
+  xhr.open('GET', 'https://api.wolframalpha.com/v1/result?i=' + question + '&appid=27LAYV-JVWUHLR5JQ');
   xhr.send(null);
 
   xhr.onreadystatechange = function () {
@@ -101,26 +101,6 @@ function answerMe(question) {
       diagnostic.textContent = 'Error: ' + xhr.status; // An error occurred during the request.
     }
   }
-
-request.onerror = function() {
-  // There was a connection error of some sort
-};
-
-request.send();
-
-  // var xmlHttp = new XMLHttpRequest();
-  // xmlHttp.onreadystatechange = function() { 
-  // if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-  //   //callback(xmlHttp.responseText);
-  //   console.log(xmlHttp.queryresult);
-
-  //   diagnostic.textContent = xmlHttp.queryresult;
-  // }
-
-  // // http://www.whateverorigin.org/get?url=http://api.wolframalpha.com/v2/query?appid=27LAYV-JVWUHLR5JQ&input=population%20of%20france&callback=?
-
-  // xmlHttp.open("GET", "https://api.wolframalpha.com/v1/result?i=What+is+the+stock+price+of+Twitter%3F&appid=DEMO", true); // true for asynchronous 
-  // xmlHttp.send(null);
 };
 
 
