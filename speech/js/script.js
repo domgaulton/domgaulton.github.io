@@ -97,8 +97,10 @@ function answerMe(question) {
   if (xhr.readyState === DONE) {
     if (xhr.status === OK) 
       diagnostic.textContent = xhr.responseText; // 'This is the returned text.'
+      console.log(xhr.responseText);
     } else {
       diagnostic.textContent = 'Error: ' + xhr.status; // An error occurred during the request.
+      console.log(xhr.status);
     }
   }
 };
