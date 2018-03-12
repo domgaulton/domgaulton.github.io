@@ -87,7 +87,7 @@ recognition.onerror = function(event) {
 
 function answerMe() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://api.wolframalpha.com/v1/result?i=What+is+the+stock+price+of+Twitter%3F&appid=DEMO');
+  xhr.open('GET', 'https://api.wolframalpha.com/v1/result?i=What+is+the+stock+price+of+Twitter%3F&appid=DEMO');
   xhr.send(null);
 
   xhr.onreadystatechange = function () {
