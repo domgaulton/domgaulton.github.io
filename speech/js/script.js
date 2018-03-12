@@ -87,7 +87,7 @@ recognition.onerror = function(event) {
 
 function answer() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://api.wolframalpha.com/v1/result?appid=27LAYV-JVWUHLR5JQ&i=how+old+is+obama');
+  xhr.open('GET', 'https://api.wolframalpha.com/v1/result?appid=27LAYV-JVWUHLR5JQ&i=how+old+is+obama');
   xhr.send(null);
 };
 
