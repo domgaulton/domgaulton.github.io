@@ -243,4 +243,6 @@ strong {
     width: 100px;
     margin: 0px auto; }
   .header__subtitle {
+    font-weight: bold;
+    letter-spacing: 1.7px;
     color: #666; }
