@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-M4Q8T9H');</script>
+	<!-- End Google Tag Manager -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Dom Gaulton Web Developer</title>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4Q8T9H"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<nav class="navigation">
+		<ul class="navigation__items">
+			<li><a href="/">Home / Projects</a></li>
+			<li><a href="https://github.com/domgaulton">GitHub</a></li>
+			<li><a href="/#dev">Development</a></li>
+		</ul>
+		<div class="navigation__ui">
+			<div class="navigation__ui--line nav-line-1"></div>
+			<div class="navigation__ui--line nav-line-2"></div>
+			<div class="navigation__ui--line nav-line-3"></div>
+		</div>
+	</nav>
+	
+	<header class="header">
+		<h1 class="header__title">ŠKODA Pattern Library</h1>
+		<p class="header__subtitle">Atomic Design | Branding | Github Pages | Modular Build</p>
+	</header>
+
+	<article class="content">
+
+		<p class="content__intro">A fully responsive set of reviewed and tested webparts that can be used across the seperate desktop and mobile ŠKODA platforms.</p>
+
+		<div class="content__ctas">
+			<a class="cta cta__secondary" href="https://skodauk.github.io/dist/index.html">Pattern Library</a>
+			<a class="cta cta__secondary" href="https://github.com/skodauk/skodauk.github.io">GitHub</a>
+		</div>
+
+		<img class="content__img" src="img/projects/skoda/pattern-library/skoda-pattern-library.jpg">
+
+		<p class="content__copy">With an account that runs for 12 years, with countless designers and developers coming and going, the lead designer and myself decided we needed consistency going forward. We have always have rough guidelines, but we embarked on starting from scratch, creating design guidelines and developing resuable modules that could be used accross the desktop and mobile platforms. We had the basics that we needed from the ŠKODA CI but we needed to set the rest. We created a Sketch file with the fonts, colours and basic 'atoms' and then used <a href="http://atomicdesign.bradfrost.com/">Brad Frosts Atomic Principles</a> to build the Molecules, Organisms and then Webparts (we didn't following Brad too strictly as the Sharepoint CMS wouldn't work in this way). Due to the Sharepoint limitations, I actually ended up making a CMS within a CMS where we would just change copy and images but keep the modules untouched.</p>
+	
+	</article>
+
+	<footer>
+
+	</footer>
+
+		<script>
+
+		const navMenu = document.querySelector('.navigation__ui');
+		const navLines = document.querySelectorAll('.navigation__ui--line');
+		const navLine1 = document.querySelector('.nav-line-1');
+		const navLine2 = document.querySelector('.nav-line-2');
+		const navLine3 = document.querySelector('.nav-line-3');
+		const navItems = document.querySelector('.navigation__items');
+
+		function toggleNav() {
+		  navItems.classList.toggle('active');
+		  navLines.forEach(navLine => {
+		  	navLine.classList.toggle('active');
+		  });
+		};
+
+		function toggleMenu(e) {
+		  // console.log(e.propertyName);
+		  const transitionType = e.propertyName;
+		  if (transitionType !== 'transform') return;
+		  console.log("once");
+		  navLines.forEach(navLine => {
+		  	navLine.classList.toggle('active');
+		  });
+		};
+
+		navMenu.addEventListener('click', toggleNav);
+		//navItems.addEventListener('transitionend', toggleMenu);
+
+	</script>
+
+	
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
