@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins|Rozha+One");
 body {
-  text-align: center;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  text-align: center; }
 
 h1 {
   font-family: 'Rozha One', serif; }
 
 button {
-  cursor: pointer;
+  font-size: 24px;
   width: 200px;
   height: 50px;
-  font-size: 24px;
+  cursor: pointer;
   background-color: red; }
